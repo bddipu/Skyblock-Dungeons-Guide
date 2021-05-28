@@ -425,16 +425,16 @@ public class FeatureViewPlayerOnJoin extends SimpleFeature implements GuiPostRen
 
     public IChatComponent getHoveredComponent(ScaledResolution scaledResolution) {
         IChatComponent ichatcomponent = null;
-        if (Loader.isModLoaded("hychat")) {
-            try {
-                ChatManager chatManager = HyChat.getInstance().getChatManager();
-                GuiChatBox guiChatBox = chatManager.getFocusedChat();
+//        if (Loader.isModLoaded("hychat")) {
+//           try {
+//                ChatManager chatManager = HyChat.getInstance().getChatManager();
+//                GuiChatBox guiChatBox = chatManager.getFocusedChat();
 
-                int x = guiChatBox.getX(scaledResolution);
-                int y = guiChatBox.getY(scaledResolution);
-                ichatcomponent = guiChatBox.chatArray.getHoveredComponent(guiChatBox.getSelectedTab().getChatLines(), Mouse.getX(), Mouse.getY(), x, y);
-            } catch (Throwable t) {}
-        }
+//                int x = guiChatBox.getX(scaledResolution);
+//                int y = guiChatBox.getY(scaledResolution);
+//                ichatcomponent = guiChatBox.chatArray.getHoveredComponent(guiChatBox.getSelectedTab().getChatLines(), Mouse.getX(), Mouse.getY(), x, y);
+//            } catch (Throwable t) {}
+//        }
         if (ichatcomponent == null) {
             ichatcomponent = Minecraft.getMinecraft().ingameGUI.getChatGUI().getChatComponent(Mouse.getX(), Mouse.getY());
         }
